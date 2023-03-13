@@ -10,11 +10,11 @@ int _printf(const char *format, ...)
 {
 	int printed_chars;
 	convert_t f_list[] = {
-	{"c", print_char},
-	{"s", print_string},
-	{"%", print_percent},
-	{"d", print_d},
-	{"i", print_i},
+	{"c", pr_char},
+	{"s", pr_string},
+	{"%", pr_percent},
+	{"d", pr_decimal},
+	{"i", pr_int},
 													};
 	va_list arg_list;
 
