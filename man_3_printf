@@ -17,8 +17,8 @@ passes the output to standard write() function in‐cluded in
 - All conversion characters and flag characters can be seen below.
 .SH FLAG CHARACTERS
 The character  %  is  followed by one of the following characters							              described below.  This specifies that that conversion character should be				             replaced with the content of the function's arguments.
-
-.SH CONVERSION CHARACTERS											        	Character that specifies the type of convertion to be aplly.
+.SH CONVERSION CHARACTERS
+Character that specifies the type conversion to be aplly
 
 														c	This character indicates that the argument to be
 														                formatted is of type [char]. The function prints
@@ -45,9 +45,9 @@ The character  %  is  followed by one of the following characters							        
 
 																																			            _printf(%c, 'a');
 																																				                  prints on screen: a
-
-																																						         printf("Print number %d and a character %c", 5, 'F');
-																																							               prints on screen: Print number 5 and a character F
-
-																																								       .SH AUTHORS																																							          	Erin Hendrickson Carter -- Rae Brown
-.SH SEE ALSO																					printf(1), printf(2), printf(3), write(3)
+									printf("Print number %d and a character %c", 5, 'F');
+prints on screen: Print number 5 and a character F
+.SH AUTHORS								
+Erin Hendrickson Carter -- Rae Brown
+.SH SEE ALSO
+printf(1), printf(2), printf(3), write(3)
