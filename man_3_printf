@@ -1,0 +1,53 @@
+Man page for _printf"
+
+
+.TH _printf "13 Mar 2023" "1.0" "_printf man page"
+.SH NAME
+_printf - This function receives a formatted string or character.
+.SH SYNOPSIS
+#include main.h
+int printf(const char *format, ...)
+.SH DESCRIPTION
+The function _printf() receives a character or string and concatenates
+it with different arguments passed to it as a second option and then
+prints each of the formatted characters.
+This function stores the formatted result in a buffer and
+passes the output to standard write() function in‐cluded in
+<unistd.h> library.
+- All conversion characters and flag characters can be seen below.
+.SH FLAG CHARACTERS
+The character  %  is  followed by one of the following characters							              described below.  This specifies that that conversion character should be				             replaced with the content of the function's arguments.
+
+.SH CONVERSION CHARACTERS											        	Character that specifies the type of convertion to be aplly.
+
+														c	This character indicates that the argument to be
+														                formatted is of type [char]. The function prints
+																		a single character.
+
+																			s	This character indicates that the argument to be
+																			         	formatted is of type [string]. The function prints
+																							a string of characters.
+
+																								%	No argument is converted. The function prints a
+																										single % character.
+
+																											d, i    This character indicates that the argument to be
+																													formatted is of type [integer]. The function prints
+																															a number. (d) works with decimal (base 10) numbers.
+
+																															.SH RETURN VALUE
+																															   	This function returns the number of characters printed (excluding the
+																																	null byte used to end output to strings).
+
+.SH EXAMPLES
+																																	       _printf("Hello World!");
+																																	                     prints on screen: Hello World!
+
+																																			            _printf(%c, 'a');
+																																				                  prints on screen: a
+
+																																						         printf("Print number %d and a character %c", 5, 'F');
+																																							               prints on screen: Print number 5 and a character F
+
+																																								       .SH AUTHORS																																							          	Erin Hendrickson Carter -- Rae Brown
+.SH SEE ALSO																					printf(1), printf(2), printf(3), write(3)
