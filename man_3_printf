@@ -16,37 +16,29 @@ passes the output to standard write() function in‐cluded in
 <unistd.h> library.
 - All conversion characters and flag characters can be seen below.
 .SH FLAG CHARACTERS
-The character  %  is  followed by one of the following characters							              described below.  This specifies that that conversion character should be				             replaced with the content of the function's arguments.
+The character  %  is  followed by one of the following characters
+described below. This specifies that the conversion characters should be replaced with the content of the function's arguments.
 .SH CONVERSION CHARACTERS
-Character that specifies the type conversion to be aplly
-
-														c	This character indicates that the argument to be
-														                formatted is of type [char]. The function prints
-																		a single character.
-
-																			s	This character indicates that the argument to be
-																			         	formatted is of type [string]. The function prints
-																							a string of characters.
-
-																								%	No argument is converted. The function prints a
-																										single % character.
-
-																											d, i    This character indicates that the argument to be
-																													formatted is of type [integer]. The function prints
-																															a number. (d) works with decimal (base 10) numbers.
-
-																															.SH RETURN VALUE
-																															   	This function returns the number of characters printed (excluding the
-																																	null byte used to end output to strings).
-
+Character that specifies the type of conversion to be applied.
+	c	This character indicates that the argument to be formatted is of
+		type [char]. The function prints a single character.
+	s	This character indicates the the argument to be formatted is of 
+		type [string]. The function prints a string of characters.
+	%	No argument is converted. The function prints a single % character
+	d, i	This character indicates that the argument to be formatted is of 
+		type [integer]. The function prints a number. (d) works with 
+		decimal (base 10) numbers.
+.SH RETURN VALUE
+This function returns the number of characters printed (excluding the
+null byte used to terminate the output to strings).
 .SH EXAMPLES
-																																	       _printf("Hello World!");
-																																	                     prints on screen: Hello World!
+	_printf("Hello World!");
+		prints on screen: Hello World!
 
-																																			            _printf(%c, 'a');
-																																				                  prints on screen: a
-									printf("Print number %d and a character %c", 5, 'F');
-prints on screen: Print number 5 and a character F
+	_printf(%c, 'j');
+		prints on screen: j
+	_printf("Print number %d and a character %c", 6, 'R');
+		prints on screen: Print number 6 and a character R
 .SH AUTHORS								
 Erin Hendrickson Carter -- Rae Brown
 .SH SEE ALSO

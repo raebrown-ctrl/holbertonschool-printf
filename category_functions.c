@@ -1,5 +1,6 @@
 #include "main.h"
 /**
+<<<<<<< HEAD
 * pr_char - handle specific char 'c' from
 * list of args
 *
@@ -102,3 +103,28 @@ void pr_int(char *buffer, va_list args, int *bf_count)
 		num--;
 	}
 }
+=======
+* get_category_functions - function that returns a specifier.
+* @cc: compare a character for function.
+*Return: if 'cc' is NULL return NULL. If 'cc' is == return specifier.
+*/
+
+void (*get_category_functions(char cc))(char *, va_list, int *)
+{
+	int i = 0;
+	specifiers type[] = {
+		{"c", pr_char},
+		{"s", pr_string},
+		{"d", pr_decimal},
+		{"i", pr_int},
+		{NULL, NULL}
+	};
+	for (; type[i].type != NULL && *(type[i].type) != cc; i++)
+		if (type[i].type == NULL)
+		{
+			return (NULL);
+		}
+	return (type[i].box);
+}
+
+>>>>>>> master
