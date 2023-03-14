@@ -44,7 +44,7 @@ void pr_string(char *buffer, va_list args, int *bf_count)
 
 	if (cc == NULL)
 		cc = "(null)";
-	for (i = 0; ch[i] != '\0'; i++)
+	for (i = 0; cc[i] != '\0'; i++)
 	{
 		buffer[*bf_count] = cc[i];
 		(*bf_count)++;
@@ -85,7 +85,7 @@ void pr_int(char *buffer, va_list args, int *bf_count)
 	else if (arg < 0)
 	{
 		buffer[*bf_count] = '-';
-		(*bf_count)++
+		(*bf_count)++;
 		while (arg != 0)
 		{
 			temp_num = arg % 10 * -1;
