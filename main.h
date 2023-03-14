@@ -8,10 +8,10 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-void pr_string(char *buffer, va_list args, int *buf_count);
+void spec_string(char *buffer, va_list args, int *buf_count);
 void pr_char(char *buffer, va_list args, int *buf_count);
 void pr_int(char *buffer, va_list args, int *buf_count);
-void (*get_spec_functions(char c))(char*, va_list args, int*);
+void (*get_category_functions(char cc))(char*, va_list args, int*);
 
 /**
 * struct specifiers - format specifiers

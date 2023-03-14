@@ -8,7 +8,7 @@
 void (*get_category_functions(char cc))(char *, va_list, int *)
 {
 	int i = 0;
-	specifier type[] = {
+	specifiers type[] = {
 		{"c", pr_char},
 		{"s", pr_string},
 		{"d", pr_decimal},
