@@ -8,7 +8,7 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-void spec_string(char *buffer, va_list args, int *buf_count);
+void pr_string(char *buffer, va_list args, int *buf_count);
 void pr_char(char *buffer, va_list args, int *buf_count);
 void pr_int(char *buffer, va_list args, int *buf_count);
 void (*get_category_functions(char cc))(char*, va_list args, int*);

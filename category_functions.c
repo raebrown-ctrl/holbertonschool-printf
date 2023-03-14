@@ -8,18 +8,18 @@
 void (*get_category_functions(char cc))(char *, va_list, int *)
 {
 	int i = 0;
-	specifiers type[] = {
+	specifiers cat[] = {
 		{"c", pr_char},
 		{"s", pr_string},
-		{"d", pr_decimal},
+		{"d", pr_int},
 		{"i", pr_int},
 		{NULL, NULL}
 	};
-	for (; type[i].type != NULL && *(type[i].type) != cc; i++)
-		if (type[i].type == NULL)
+	for (; cat[i].cat != NULL && *(cat[i].cat) != cc; i++)
+		if (cat[i].cat == NULL)
 		{
 			return (NULL);
 		}
-	return (type[i].box);
+	return (cat[i].box);
 }
 
